@@ -10,39 +10,6 @@ app.directive('ticker', function ($log, $interval, $timeout) {
         link: function (scope, elem, attr) {
 
 
-            /* $log.log(scope.strings)
-             scope.i = 0
-             scope.ticks = scope.strings
-
-             // Append all the strings
-             var combine = function (s) {
-             var ret = ""
-             s.forEach(function (str) {
-             ret += str + " ";
-             })
-             return ret;
-             }
-
-             */
-            /* scope.x = [];
-             scope.rem = 0
-             scope.current = 0
-             scope.text = combine(scope.strings);
-             */
-
-            /*var intP = $interval(function(){
-             scope.ticks.push(scope.strings[scope.i])
-             scope.i = (scope.i + 1) % scope.strings.length;
-
-             }, 1000)
-             $timeout(function(){
-             $interval.cancel(intP);
-             }, 10000)*/
-
-            /*for (var i = 0; i < 10; i++){
-             scope.ticks.push(scope.strings[i])
-             }*/
-
             var str = [];
             var strlens = [];
             scope.slider = {leftPos: []};
@@ -77,9 +44,15 @@ app.directive('ticker', function ($log, $interval, $timeout) {
                 }
             })
 
+            
 
             $interval(function () {
                 for (var i = 0; i < scope.strings.length; i++) {
+                    if (!scope.slider.leftPos[i]) {
+                        strlens[i] = eval("str" + i).offsetWidth + 20;
+                        scope.slider.leftPos[i] = lastLeft;
+                        lastLeft += strlens[i];
+                    }
                     scope.slider.leftPos[i] = (scope.slider.leftPos[i] - SHIFT); //SHIFT LEFT
                     if (scope.slider.leftPos[i] < -strlens[i]) {
                         scope.slider.leftPos[i] = lastLeft;

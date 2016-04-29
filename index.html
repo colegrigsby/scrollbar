@@ -27,6 +27,7 @@
     <script src="app/components/ticker/ticker.directive.js"></script>
 
     <script src="app/components/media/mediaController.js"></script>
+    <script src="app/components/ticker/stringsController.js"></script>
 
 
     <!-- Get the stylesheets -->
@@ -49,9 +50,8 @@
 
 <div ui-view></div>
 
-<ticker strings="['good morning', 'welcome',
-'this is a really really really really really really long message',
- 'more stuff', 'words words words', 'ahhhhhh',
-'more']"></ticker>
+<div ng-controller="stringsController">
+    <ticker strings=strings></ticker>
+</div>
 </body>
 </html>
