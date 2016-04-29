@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- App Usually Defined on the HTML Tag -->
+<html ng-app="finalApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Final Project</title>
+
+    <!-- Import all JS -->
+    <script src="assets/bower_components/angular/angular.js"></script>
+    <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="assets/bower_components/json-formatter/dist/json-formatter.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.11.1/lodash.min.js"></script>
+
+
+    <script src="app/finalApp.module.js"></script>
+    <script src="app/finalApp.routes.js"></script>
+    <!--<script src="app/components/home/homeController.js"></script>-->
+    <script src="app/shared/a8api/ngA8API2.js"></script>
+    <script src="app/components/guests/guestsController.js"></script>
+    <script src="app/components/guests/guestInfoModal.controller.js"></script>
+
+    <script src="app/components/experiences/experiencesController.js"></script>
+    <script src="app/components/experiences/experienceTable.directive.js"></script>
+
+    <script src="app/components/ticker/ticker.directive.js"></script>
+
+    <script src="app/components/media/mediaController.js"></script>
+
+
+    <!-- Get the stylesheets -->
+    <link rel="stylesheet" href="assets/bower_components/json-formatter/dist/json-formatter.min.css" type="text/css"/>
+
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css"/>
+
+</head>
+
+<!-- Controllers can be on any element, here it's on the body and that's what we usually do -->
+
+<body>
+
+<div class="top_banner">
+    <a href="#/"><img class="logo" src="assets/img/oplogo.png"></a>
+    <a href="#/" class="home pull-right">Home</a>
+
+</div>
+
+<div ui-view></div>
+
+<ticker strings="['good morning', 'welcome',
+'this is a really really really really really really long message',
+ 'more stuff', 'words words words', 'ahhhhhh',
+'more']"></ticker>
+</body>
+</html>

@@ -1,0 +1,292 @@
+.top_banner {
+    width: 100%;
+    background: #000;
+    height: 100px;
+    color: whitesmoke;
+}
+
+
+.logo {
+    height: 100px;
+    animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.nobullet {
+    list-style-type: none;
+}
+
+.grow {
+    -webkit-transition: all 150ms linear;
+    transition: all 150ms linear;
+}
+
+.grow:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.link {
+    color: maroon;
+    transition: font-size 0.5s ease-in-out;
+}
+
+.link:hover {
+    font-size: larger;
+}
+
+.home {
+    margin-top:35px;
+    margin-right:10px;
+    font-size: x-large;
+    color:whitesmoke;
+}
+
+.animate-repeat {
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+    -webkit-transition:all linear 300ms;
+    transition:all linear 300ms;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+    opacity:0;
+
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+    opacity:1;
+
+}
+
+.experience-image {
+    width: 300px;
+}
+.experience-imag div {
+    height: 300px;
+}
+.experience-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+
+
+.ticker {
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: dodgerblue;
+    height: 80px;
+    overflow: hidden;
+}
+
+
+.left-scroll {
+    postion: absolute;
+    line-height: 80px;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    animation-play-state: running;
+    animation: scroll-left 25s linear infinite;
+}
+
+/*Going to scroll at different speeds for different width screens */
+
+
+@keyframes scroll-left {
+    0%   {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+.up-scroll {
+    postion: absolute;
+    line-height: 80px;
+    text-align: center;
+    -moz-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+
+
+    animation: scroll-up 45s linear infinite;
+}
+
+@keyframes scroll-up {
+    0%   {
+        -moz-transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    100% {
+        -moz-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+/*
+
+.spacer {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+.left-repeat {
+    postion: absolute;
+    line-height: 80px;
+    text-align: center;
+    transform: translateX(0%);
+    aanimation: scroll-left 25s linear infinite;
+}
+
+.left-repeat.ng-move,
+.left-repeat.ng-enter,
+.left-repeat.ng-leave {
+    animation: scroll-left 25s linear;
+
+}
+
+.left-repeat.ng-leave.ng-leave-active,
+.left-repeat.ng-move,
+.left-repeat.ng-enter {
+    opacity:1;
+
+}
+
+.left-repeat.ng-leave,
+.left-repeat.ng-move.ng-move-active,
+.left-repeat.ng-enter.ng-enter-active {
+    opacity:1;
+
+}
+
+
+
+.edge{
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    position:absolute;
+    height:100%;
+    display:block;
+}
+.edge:before{
+    content:'';
+    position:absolute;
+    left:0;
+    background:-webkit-linear-gradient(left, white 10%, rgba(0,0,0,0) 100%);
+    width:25%;
+    height:100%;
+}
+.edge:after{
+    content:'';
+    position:absolute;
+    right:0;
+    background:-webkit-linear-gradient(right, white 10%, rgba(0,0,0,0) 100%);
+    width:25%;
+    height:100%;
+}
+
+
+.animate-show {
+    line-height: 80px;
+    overflow: visible;
+    display:inline-flex;
+    width: 100%;
+    background-color: green;
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.animate-show.ng-hide-remove {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    animation: scroll-left linear 15s;
+}
+
+.animate-show.ng-hide {
+    line-height: 80px;
+
+}
+
+@keyframes scroll-left-px {
+    0%   {
+        -moz-transform: translateX(1200px);
+        -webkit-transform: translateX(1200px);
+        transform: translateX(1200px);
+    }
+    100% {
+        -moz-transform: translateX(-1000px);
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+    }
+}
+
+*/
+
+.left{
+    overflow:hidden;
+    width:100%;
+    margin:0;
+}
+
+.text-slider {
+    height: 80px;
+    position: absolute;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.text-format {
+    font-size: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    overflow: visible;
+    display: inline-block;
+    font-family: Arial;
+    white-space: nowrap;
+    text-align: center;
+}

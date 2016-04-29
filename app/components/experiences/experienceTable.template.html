@@ -1,0 +1,43 @@
+
+<row>
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6">
+        <input type="text" class="form-control text-center"
+               placeholder="Search First, Last or Email" ng-model="guest">
+    </div>
+    <div class="col-xs-3"></div>
+
+</row>
+
+<br>
+<br>
+<table class="table table-bordered table-striped">
+
+    <tbody ng-repeat="exp in experiences | orderBy: sorter | filter: filterNameEmail" class="animate-repeat">
+    <tr>
+        <td colspan="4" class="text-center success">
+            <h4> Experiences for {{exp[0].guests[0].firstName}} {{exp[0].guests[0].lastName}}
+            ({{exp[0].guests[0].email}}) </h4>
+        </td>
+
+    </tr>
+
+
+    <tr ng-repeat="e in exp" class="text-center">
+        <td>{{e.experiencedAt | date : 'EEEE, MMMM d, y'}}</td>
+        <td>{{e.experienceName}}</td>
+        <td>{{e.metadata.score}}</td>
+        <td class="experience-image">
+            <div>
+                <img class="" ng-src="http://162.243.133.57:1337/api/v2/media/download/{{e.media[0].data.id}}">
+            </div>
+        </td>
+
+    </tbody>
+
+
+    </tbody>
+</table>
+
+
+
